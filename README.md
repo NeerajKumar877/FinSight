@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📊 FinSight
+# FinSight
 ### Institutional Financial Performance & Market Risk Analysis Platform
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
@@ -8,17 +8,17 @@
 [![Plotly](https://img.shields.io/badge/Plotly-5.18%2B-3F4F75.svg?logo=plotly&logoColor=white)](https://plotly.com/)
 [![Code Style](https://img.shields.io/badge/Code%20Style-PEP8-brightgreen.svg)](https://pep8.org/)
 [![Test Suite](https://img.shields.io/badge/Tests-11%20Passed-success.svg)](https://docs.pytest.org/)
-[![Data Integrity](https://img.shields.io/badge/Dataset-100%25%20Synthetic-orange.svg)](#-data-architecture--governance)
+[![Data Integrity](https://img.shields.io/badge/Dataset-100%25%20Synthetic-orange.svg)](#data-architecture--governance)
 
 *A modular quantitative analytics and market risk platform that connects corporate operational health with balance sheet tail-risk management and strategic decision-making.*
 
-[Live Architecture](#-system-architecture) • [Tech Stack](#-technology-stack) • [Application Flow](#-application-flow--user-journey) • [Quantitative Engines](#-core-quantitative-methodologies) • [Roadmap](#-project-roadmap) • [Quickstart](#-quickstart--installation)
+[Architecture](#system-architecture) • [Tech Stack](#technology-stack) • [Application Flow](#application-flow--user-journey) • [Quantitative Engines](#core-quantitative-methodologies) • [Roadmap](#project-roadmap) • [Quickstart](#quickstart--installation)
 
 ---
 
 </div>
 
-## 📌 Executive Overview
+## Executive Overview
 
 **FinSight** is an institutional-grade financial analytics and market risk platform designed to evaluate both internal operational profitability and multi-asset portfolio market exposure.
 
@@ -33,13 +33,13 @@ FinSight solves this by integrating:
 
 ---
 
-## 🏛 System Architecture
+## System Architecture
 
 FinSight follows a strict modular architecture separating the data layer, analytical computation engines, visualization layers, and the interactive UI presentation.
 
 ```mermaid
 flowchart TD
-    subgraph DataLayer["📁 Data Layer (Synthetic & Reproducible)"]
+    subgraph DataLayer["Data Layer (Synthetic & Reproducible)"]
         D1["synthetic_financial_performance.csv<br/>(24-Month Operating Financials)"]
         D2["synthetic_portfolio_prices.csv<br/>(504-Day Correlated Asset Prices)"]
         GEN["data_generator.py<br/>(Geometric Brownian Motion + Cholesky Decomposition)"]
@@ -47,14 +47,14 @@ flowchart TD
         GEN --> D2
     end
 
-    subgraph AnalyticsEngine["⚙️ Quantitative & Analytics Core"]
+    subgraph AnalyticsEngine["Quantitative & Analytics Core"]
         M1["financial_analytics.py<br/>• Revenue Aggregation<br/>• Operating Margins<br/>• MoM Growth Velocity"]
         M2["portfolio_analytics.py<br/>• Weighted Returns<br/>• Annualized Volatility (σ√252)<br/>• Pearson Correlation Matrix"]
         M3["risk_analytics.py<br/>• 1-Day 95% Historical VaR<br/>• 1-Day 95% Expected Shortfall<br/>• Deterministic Stress Testing"]
         M4["recommendations.py<br/>• Metric-Triggered Rules<br/>• Capital Governance Advice<br/>• Actionable Strategy"]
     end
 
-    subgraph VisualLayer["📈 Institutional Visualization Layer (utils.py)"]
+    subgraph VisualLayer["Institutional Visualization Layer (utils.py)"]
         V1["Plotly Financial Trend & Margin Mix"]
         V2["Multi-Asset Cumulative Compounding"]
         V3["4x4 Pearson Correlation Heatmap"]
@@ -62,7 +62,7 @@ flowchart TD
         V5["Stress Loss Contribution Waterfall"]
     end
 
-    subgraph Presentation["🖥️ Streamlit Presentation Layer (app.py)"]
+    subgraph Presentation["Streamlit Presentation Layer (app.py)"]
         UI1["1. Executive Overview"]
         UI2["2. Financial Performance"]
         UI3["3. Portfolio Analysis"]
@@ -86,7 +86,7 @@ flowchart TD
 
 ---
 
-## 💻 Technology Stack
+## Technology Stack
 
 | Layer | Technology | Primary Rationale & Responsibility |
 | :--- | :--- | :--- |
@@ -99,7 +99,7 @@ flowchart TD
 
 ---
 
-## 🗺️ Application Flow & User Journey
+## Application Flow & User Journey
 
 FinSight organizes the executive user journey across six structured workflows:
 
@@ -143,7 +143,7 @@ FinSight organizes the executive user journey across six structured workflows:
 
 ---
 
-## 🔬 Core Quantitative Methodologies
+## Core Quantitative Methodologies
 
 <details>
 <summary><strong>1. Portfolio Daily Compounding & Annualization</strong></summary>
@@ -184,22 +184,22 @@ FinSight organizes the executive user journey across six structured workflows:
 
 ---
 
-## 🚀 Project Roadmap
+## Project Roadmap
 
 ```
  v1.0 Production Core (Current)          v1.5 Multi-Factor & Risk            v2.0 Real-Time Institutional
 ───────────────────────────────         ──────────────────────────          ────────────────────────────
-✔ 24M Corporate Financials              ◻ DCC-GARCH Dynamic Correlations    ◻ Live Market Data WebSockets
-✔ 4-Asset Correlated GBM Simulation     ◻ Parametric & Monte Carlo VaR      ◻ Real-Time Fix Order Routing
-✔ Historical VaR (95%) & ES             ◻ Macro Factor Attribution (PCA)    ◻ Liquidity-Adjusted VaR (L-VaR)
-✔ Deterministic Stress Scenarios        ◻ Duration & Convexity Modeling     ◻ Scenario Reverse Stress Testing
-✔ Interactive Streamlit Dashboard       ◻ Automated PDF Report Generation   ◻ SQL / Snowflake Warehouse Sync
-✔ 100% Automated Unit Test Suite        ◻ Multi-Currency Portfolio Hedging  ◻ Enterprise Role-Based Access
+[x] 24M Corporate Financials            [ ] DCC-GARCH Dynamic Correlations  [ ] Live Market Data WebSockets
+[x] 4-Asset Correlated GBM Simulation   [ ] Parametric & Monte Carlo VaR    [ ] Real-Time Fix Order Routing
+[x] Historical VaR (95%) & ES           [ ] Macro Factor Attribution (PCA)  [ ] Liquidity-Adjusted VaR (L-VaR)
+[x] Deterministic Stress Scenarios      [ ] Duration & Convexity Modeling   [ ] Scenario Reverse Stress Testing
+[x] Interactive Streamlit Dashboard     [ ] Automated PDF Report Generation [ ] SQL / Snowflake Warehouse Sync
+[x] 100% Automated Unit Test Suite      [ ] Multi-Currency Portfolio Hedging[ ] Enterprise Role-Based Access
 ```
 
 ---
 
-## ⚡ Quickstart & Installation
+## Quickstart & Installation
 
 ### Prerequisites
 - Python 3.9, 3.10, or 3.11 installed.
@@ -207,7 +207,7 @@ FinSight organizes the executive user journey across six structured workflows:
 ### 1. Clone Repository & Setup Environment
 ```bash
 # Clone the repository
-git clone https://github.com/Neerajkumar877/FinSight.git
+git clone https://github.com/NeerajKumar877/FinSight.git
 cd FinSight
 
 # Create and activate a virtual environment
@@ -234,7 +234,7 @@ Open your browser at `http://localhost:8501`.
 
 ---
 
-## 🧪 Testing & Validation Matrix
+## Testing & Validation Matrix
 
 FinSight includes 11 automated unit and integration tests verifying all calculations against manual pencil-and-paper assertions:
 
@@ -252,13 +252,13 @@ FinSight includes 11 automated unit and integration tests verifying all calculat
 
 ---
 
-## ⚖️ Data Architecture & Governance
+## Data Architecture & Governance
 
 > **DATASET GOVERNANCE NOTICE:**  
 > All financial data, transactions, and price histories utilized in FinSight are **100% synthetic**. Daily multi-asset returns are modeled via **Geometric Brownian Motion (GBM)** utilizing Cholesky decomposition of an empirical institutional correlation matrix. Corporate financial records represent a fictional institutional investment entity generated for academic and placement evaluation purposes. This project does not utilize live client records, proprietary bank data, or regulatory Basel capital frameworks.
 
 ---
 
-## 📜 License & Credits
+## License & Credits
 
 Distributed under the MIT License. Developed for quantitative finance, financial risk analysis, and business consulting portfolio demonstration.
